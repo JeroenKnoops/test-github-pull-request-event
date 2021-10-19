@@ -13,4 +13,4 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2.3.4
       - name: Echo event
-        run: jq -r . /github/workflow/event.json
+        run: jq -r . $GITHUB_EVENT_PATH
