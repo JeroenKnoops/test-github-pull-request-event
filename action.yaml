@@ -11,5 +11,5 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - run: echo ${{ inputs.github_context }}
+    - run: echo '${{ inputs.github_context }}'
       shell: bash
