@@ -9,7 +9,7 @@ inputs:
     required: true
     default: ${{ toJSON(github) }}
 runs:
-  using: "composite"
-  steps:
-    - run: echo '${{ inputs.github_context }}'
-      shell: bash
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - '${{ inputs.github_context }}'
