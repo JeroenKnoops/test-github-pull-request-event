@@ -1,8 +1,7 @@
-FROM alpine:3.14.2 as certs
+FROM alpine:3.14.2
 RUN apk update && apk add ca-certificates
 
-FROM gcr.io/distroless/base
-COPY --from=certs /etc/ssl/certs /etc/ssl/certs
+RUN apk add --no-cache bash
 
 COPY entrypoint.sh /usr/local/bin/
 
