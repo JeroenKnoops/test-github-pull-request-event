@@ -10,3 +10,5 @@ GitHub Pull Request event from Dependabot contains double encoded body
 ## Related issue
 
 - [SLSA-Provenance-Action dependabot fixes](https://github.com/philips-labs/slsa-provenance-action/pull/55)
+
+## Test commit
