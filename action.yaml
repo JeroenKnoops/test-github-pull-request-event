@@ -1,0 +1,15 @@
+name: 'Test toJSON-with-http-in-Body Action'
+description: 'An action to test the toJSON function with http links in the Body'
+branding:
+  icon: lock
+  color: purple
+inputs:
+  github_context:
+    description: 'internal (do not set): the "github" context object in json'
+    required: true
+    default: ${{ toJSON(github) }}
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - '${{ inputs.github_context }}'
